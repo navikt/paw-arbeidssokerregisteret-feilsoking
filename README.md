@@ -1,2 +1,2 @@
-# paw-paw-arbeidssokerregisteret-feilsoking
+# paw-arbeidssokerregisteret-feilsoking
 Samlig av verktøy for feilsøking knyttet til registeret. 
