@@ -8,6 +8,8 @@ import io.ktor.server.netty.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import no.nav.paw.config.hoplite.loadNaisOrLocalConfiguration
+import no.nav.paw.config.kafka.KAFKA_CONFIG
+import no.nav.paw.config.kafka.KAFKA_CONFIG_WITH_SCHEME_REG
 import no.nav.paw.config.kafka.KafkaConfig
 import no.nav.paw.config.kafka.KafkaFactory
 import org.apache.avro.generic.GenericRecord
@@ -26,7 +28,7 @@ const val PROFILERING = "paw.arbeidssoker-profilering-beta-v2"
 val topics = listOf(OPPLYSNINGER_TOPIC, PERIODE_TOPIC, PROFILERING)
 
 fun main() {
-    val kafkaConfig = loadNaisOrLocalConfiguration<KafkaConfig>("kafka")
+    val kafkaConfig = loadNaisOrLocalConfiguration<KafkaConfig>(KAFKA_CONFIG_WITH_SCHEME_REG)
     val kafkaFactory = KafkaFactory(kafkaConfig)
 
     fun consumer(): Consumer<Long, Any> = kafkaFactory.createConsumer(
