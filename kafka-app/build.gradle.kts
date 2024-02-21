@@ -20,6 +20,10 @@ dependencies {
     implementation("io.confluent:kafka-avro-serializer:7.6.0")
     implementation(pawObservability.bundles.ktorNettyOpentelemetryMicrometerPrometheus)
 
+    // NAV
+    implementation("no.nav.security:token-validation-ktor-v2:$tokenSupportVersion")
+    implementation("no.nav.security:token-client-core:$tokenSupportVersion")
+    implementation("no.nav.common:token-client:$navCommonModulesVersion")
 }
 
 application {
