@@ -6,7 +6,7 @@ plugins {
 val jvmVersion = JavaVersion.VERSION_21
 val image: String? by project
 
-val pawUtilsVersion = "24.02.06.10-1"
+val pawUtilsVersion = "24.02.21.12-1"
 val hopliteVersion = "2.8.0.RC3"
 
 val navCommonModulesVersion = "3.2023.10.23_12.41-bafec3836d28"
