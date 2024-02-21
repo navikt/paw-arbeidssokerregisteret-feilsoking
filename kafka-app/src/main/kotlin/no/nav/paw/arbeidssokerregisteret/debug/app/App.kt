@@ -46,7 +46,7 @@ fun main() {
             get("/isReady") {
                 call.respondText("I'm ready!")
             }
-            get("api-topics/by-trace-id/{traceId}") {
+            get("/api-topics/by-trace-id/{traceId}") {
                 val traceId: String? = call.parameters["traceId"]
                 val partition: Int? = call.request.queryParameters["partition"]?.toIntOrNull()
                 if (traceId == null || partition == null) {
